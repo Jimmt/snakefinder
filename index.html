@@ -5,9 +5,14 @@
 		<title>Snake Finder</title>
 	</head>
 	<body>
+		<div id="button" style="background-color: black; width:100px; height: 100px">
 		<script type="text/javascript">
-			var authLink = "https://api.instagram.com/oauth/authorize/?client_id=f6bd228e9613463783518815dc1166f0&redirect_uri=http://google.com&response_type=token";
+			var authLink = "https://api.instagram.com/oauth/authorize/?client_id=f6bd228e9613463783518815dc1166f0&redirect_uri=http://jimmt.github.io/snakefinder&response_type=token";
+			document.getElementById("button").onclick = function(){
+				window.open(authLink);	
+			}
 			
 		</script>
+		</div>
 	</body>
 </html>
