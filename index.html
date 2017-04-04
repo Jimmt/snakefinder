@@ -7,11 +7,19 @@
 	<body>
 		<div id="button" style="background-color: black; width:100px; height: 100px">
 		<script type="text/javascript">
-			var authLink = "https://api.instagram.com/oauth/authorize/?client_id=f6bd228e9613463783518815dc1166f0&redirect_uri=http://jimmt.github.io/snakefinder&response_type=token";
+			var authLink = "https://api.instagram.com/oauth/authorize/?client_id=f6bd228e9613463783518815dc1166f0&redirect_uri=http://jimmt.github.io/snakefinder&response_type=token&scope=basic+follower_list+relationships";
 			document.getElementById("button").onclick = function(){
-				window.open(authLink);	
+				window.open(authLink, "_self");	
+			};
+			var url = window.location.href;
+			var matches = url.match(/\#(?:access_token)\=([\S\s]*?)\&/);
+			var access_token = "Not Found";
+			if(matches != null){
+				access_token = [1];
+			} else {
+
 			}
-			
+			alert(access_token);
 		</script>
 		</div>
 	</body>
